@@ -1,0 +1,230 @@
+@import './variable.scss';
+@import './mixin.scss';
+@import './index.scss';
+
+/* 实现移动端 1px , 根据不同 dpr 去缩放 */
+@mixin border-t-1px($color) {
+  position: relative;
+
+  &::before {
+    display: block;
+    content: '';
+    width: 100%;
+    border-top: 1px solid $color;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+  }
+}
+
+@mixin border-b-1px($color) {
+  position: relative;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 100%;
+    border-bottom: 1px solid $color;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media(-webkit-min-device-pixel-ratio:1.5),
+(min-device-pixel-ratio:1.5) {
+  .border-t-1px {
+    &::before {
+      -webkit-transform: scaleY(0.7);
+      transform: scaleY(0.7);
+    }
+  }
+}
+
+@media(-webkit-min-device-pixel-ratio:2),
+(min-device-pixel-ratio:2) {
+  .border-t-1px {
+    &::before {
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+  }
+}
+
+@media(-webkit-min-device-pixel-ratio:2.5),
+(min-device-pixel-ratio:2.5) {
+  .border-t-1px {
+    &::before {
+      -webkit-transform: scaleY(0.33333334);
+      transform: scaleY(0.33333334);
+    }
+  }
+}
+
+@media(-webkit-min-device-pixel-ratio:1.5),
+(min-device-pixel-ratio:1.5) {
+  .border-b-1px {
+    &::after {
+      -webkit-transform: scaleY(0.7);
+      transform: scaleY(0.7);
+    }
+  }
+}
+
+@media(-webkit-min-device-pixel-ratio:2),
+(min-device-pixel-ratio:2) {
+  .border-b-1px {
+    &::after {
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+  }
+}
+
+@media(-webkit-min-device-pixel-ratio:2.5),
+(min-device-pixel-ratio:2.5) {
+  .border-b-1px {
+    &::after {
+      -webkit-transform: scaleY(0.33333334);
+      transform: scaleY(0.33333334);
+    }
+  }
+}
+
+/* 自定义公用样式 */
+html {
+  // font-size: .14rem !important;
+  font-size: 5.208333vw;
+  font-size: 100px;
+  // @media(max-width:1366px){
+  //   font-size: 80px;
+  // }
+  color: #333333;
+  font-family: PingFangSC-Regular, PingFangSC;
+  font-weight: 400;
+}
+
+body {
+  font-size: .14rem;
+  // overflow-x: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 12rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+img {
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+}
+
+.clearfix:after {
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+.clearfix:after,
+.clearfix:before {
+  content: " ";
+  display: table;
+}
+
+// 滑动动画
+.right-slide-enter,
+.right-slide-leave-active {
+  transform: translateX(100%);
+}
+
+.right-slide-leave-active,
+.right-slide-enter-active {
+  transition: all .3s;
+}
+
+.btn-md-primary {
+  width: 1.8rem;
+  height: .54rem;
+  background: linear-gradient(54deg, rgba(251, 95, 19, 1) 0%, rgba(255, 131, 41, 1) 100%);
+  box-shadow: 0px 2px 18px 0px rgba(252, 102, 23, 0.2);
+  border-radius: .27rem;
+  color: #fff;
+  font-size: .18rem;
+  line-height: .25rem;
+  border: 0;
+
+  &:hover {
+    background: linear-gradient(54deg, rgba(255, 131, 41, 1) 0%, rgba(251, 95, 19, 1) 100%);
+  }
+}
+
+.btn-sm-primary {
+  padding: 0;
+  width: 0.94rem;
+  height: .34rem;
+  background: $mc;
+  border-radius: .17rem;
+  color: #fff !important;
+  font-size: .14rem;
+  line-height: .34rem;
+  border: 0;
+
+  &:hover {
+    background: $mc;
+    color: #fff;
+  }
+  &:active{
+    color:#fff;
+  }
+}
+
+.page-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: .4rem;
+  padding-bottom: .2rem;
+  .el-pagination {
+    // width: 3.8rem;
+
+    button {
+      width: .34rem;
+      height: .34rem;
+      line-height: .34rem;
+      padding: 0;
+      text-align: center;
+      border: 1px solid #e5e5e5;
+      margin-right: .06rem;
+    }
+
+    ul {
+      li {
+        width: .34rem;
+        height: .34rem;
+        line-height: .34rem;
+        padding: 0;
+        text-align: center;
+        border: 1px solid #e5e5e5;
+        margin-right: .06rem;
+        font-weight: normal;
+        color: $mc3;
+
+        &.active {
+          color: $mc;
+          border: 1px solid $mc;
+        }
+      }
+    }
+  }
+}

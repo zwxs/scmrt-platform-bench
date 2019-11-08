@@ -1,0 +1,6 @@
+export {default as introduce} from './introduce.vue'
+export {default as cultural} from './cultural.vue'
+export {default as advantage} from './advantage.vue'
+export {default as contactUs} from './contactUs.vue'
+export {default as notice} from './notice.vue'
+export {default as secret} from './secret.vue'

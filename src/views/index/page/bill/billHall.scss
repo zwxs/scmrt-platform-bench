@@ -1,0 +1,502 @@
+.bill-hall {
+  // height: 30rem;
+  padding-bottom: .5rem;
+
+  .kaishi,
+  .bishi {
+
+    // 顶部广告
+    .banner {
+      height: 4.5rem;
+      position: relative;
+      background-position: center center;
+
+      >.container {
+
+        >.title {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 1.23rem;
+          height: 1.90rem;
+
+          .left {
+            display: flex;
+            align-items: center;
+
+            img {
+              width: .5rem;
+              height: .5rem;
+            }
+
+            h4 {
+              padding-left: .18rem;
+              font-size: .48rem;
+              line-height: .67rem;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
+
+          .right {
+            span {
+              font-size: .28rem;
+              color: #fff;
+              line-height: .67rem;
+            }
+          }
+        }
+
+      }
+
+      >.dynamic {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -0.4rem;
+
+        >.container {
+
+          // width: 1200px%;
+          height: 220px;
+          display: flex;
+          background-color: #fff;
+          overflow: hidden;
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+
+          .left {
+            width: 6.55rem;
+            border-right: .01rem solid $mbf3;
+
+            ul {
+              display: flex;
+
+              li {
+                padding: .46rem 0;
+                text-align: center;
+                position: relative;
+                flex: 1;
+
+                .list-top {
+                  strong {
+                    font-size: .3rem;
+                    line-height: .42rem;
+                    color: #1C1C1C;
+
+                    &.red {
+                      color: $mcr;
+                    }
+                  }
+
+                }
+
+                .list-center {
+                  font-size: .16rem;
+                  color: $mc6;
+                  line-height: .22rem;
+                  padding-top: .12rem;
+                  padding-bottom: .24rem;
+                  font-weight: 400;
+                  // width: 1.23rem;
+                }
+
+                .list-bottom {}
+
+                &:last-child {
+                  .list-center {
+                    // width: 1.39rem;
+                  }
+                }
+
+                &+li {
+                  &::after {
+                    content: '';
+                    width: .01rem;
+                    height: .8rem;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: $mbf3;
+                  }
+                }
+              }
+
+            }
+          }
+
+          .right {
+            width: 5.45rem;
+            padding-top: .33rem;
+            padding-left: .7rem;
+
+            .title {
+              position: relative;
+              z-index: 2;
+
+              h4 {
+                font-size: .32rem;
+                line-height: .45rem;
+                color: $mc3;
+
+                span {
+                  color: $mc;
+                }
+              }
+
+              >p {
+                padding-top: .12rem;
+                padding-bottom: .22rem;
+                font-size: .18rem;
+                line-height: .25rem;
+                color: $mc6;
+              }
+
+              .qrcode {
+                position: absolute;
+                right: .54rem;
+                top: 0;
+                padding-top: .0rem;
+
+                img {
+                  width: 1.20rem;
+                  height: 1.20rem;
+                }
+
+                p {
+                  width: 1.20rem;
+                  padding-top: .1rem;
+                  text-align: center;
+                  font-size: .16rem;
+                  line-height: .22rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  .kaishi {
+
+    // 顶部广告
+    .banner {
+      background-image: url('./img/hall-bg1.png');
+    }
+
+    // 筛选
+    .filter {
+      margin-top: 0.7rem;
+
+      .container {
+        // height: 7.3rem;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+        padding: .2rem .4rem .4rem;
+
+        .top,
+        .bottom {
+          >ul {
+
+            >li {
+
+              display: flex;
+              border-bottom: 1px dashed #e5e5e5;
+
+              >.title {
+                color: $mc6;
+                width: 0.95rem;
+                padding: .16rem 0;
+                display: flex;
+                align-items: center;
+              }
+
+              >ul {
+                display: flex;
+
+                // min-width: 7.9rem;
+                >li {
+                  line-height: .2rem;
+                  font-size: .14rem;
+                  color: $mc3;
+                  cursor: pointer;
+                  padding: .16rem .2rem;
+
+                  &.active {
+                    color: $mc;
+                  }
+                }
+              }
+
+              >.result {
+                li {
+                  padding: .2rem .07rem;
+                  height: .72rem;
+
+                  .select-item {
+                    position: relative;
+                    // width: .8rem;
+                    padding: 0 .15rem;
+                    height: .32rem;
+                    text-align: center;
+                    line-height: .32rem;
+                    border: 1px solid $mbf3;
+
+                    .delete {
+                      position: absolute;
+                      top: .04rem;
+                      right: .04rem;
+                      width: .1rem;
+                      height: .1rem;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .bottom {
+          height: 0;
+          overflow: hidden;
+          transition: all 0.6s;
+
+          &.is-show-more {
+            height: 2.2rem;
+          }
+
+
+
+
+        }
+
+        .top:last-of-type {
+          >ul {
+            >li {
+              &:last-of-type {
+                .title {
+                  line-height: .4rem;
+                }
+
+                border-bottom: 0 solid #000;
+              }
+            }
+          }
+        }
+
+        .reset {
+          position: relative;
+          width: .8rem;
+          height: .32rem;
+          text-align: center;
+          line-height: .32rem;
+          border: 1px solid #f3f3f3;
+
+          &:hover {
+            color: $mc;
+          }
+        }
+
+        .show-more {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: .1rem;
+          width: .3rem;
+          height: .2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .bill-search {
+      margin-top: .3rem;
+
+      .container {
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+        padding: .4rem;
+
+        .title {
+          display: flex;
+          justify-content: space-between;
+          height: .44rem;
+          line-height: .44rem;
+
+          .left {
+            display: flex;
+            width: 4rem;
+
+            >span {
+              width: .8rem;
+              padding-right: .1rem;
+              font-size: .16rem;
+              color: $mc3;
+            }
+
+          }
+
+          .right {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+              margin-right: .07rem;
+            }
+
+            font-size: .16rem;
+            color:$mc;
+          }
+        }
+
+        >.content {
+          padding-top: .4rem;
+          padding-bottom: .03rem;
+
+          .table {
+            font-size: .16rem;
+
+            .table-title {
+              height: .51rem;
+              background-color: #f8f8f8;
+
+              ul {
+                li {
+                  display: flex;
+                  line-height: .22rem;
+                  padding: .15rem 0;
+
+                  .col2 {
+                    color: $mc6;
+                  }
+                }
+              }
+            }
+
+            .table-list {
+              // height: 3rem;
+              overflow: hidden;
+
+              .bill-type-tip {
+                width: .24rem;
+                height: .24rem;
+                display: inline-block;
+                font-size: .16rem;
+                line-height: .24rem;
+                text-align: center;
+                margin-left: .1rem;
+                vertical-align: middle;
+
+                &.yin {
+                  background: rgba(108, 132, 166, 0.2);
+                  color: #6C84A6;
+                }
+
+                &.shang {
+                  background: rgba(251, 95, 19, 0.2);
+                  color: #FB5F13;
+                }
+              }
+
+              ul {
+                li {
+                  display: flex;
+                  line-height: .30rem;
+                  padding: .20rem 0 .19rem;
+                  border-bottom: 1px dashed #e5e5e5;
+
+                  &:hover {
+                    background-color: #f8f8f8;
+                  }
+                }
+              }
+            }
+
+            .col1 {
+              width: 3.3rem;
+              padding-left: .32rem;
+            }
+
+            .col2 {
+              width: 1.1rem;
+              text-align: center;
+              color: $mcr;
+            }
+
+            .col3 {
+              width: 1.7rem;
+              text-align: center;
+
+            }
+
+            .col4 {
+              width: 1.3rem;
+              text-align: center;
+            }
+
+            .col5 {
+              width: 1.9rem;
+              text-align: center;
+            }
+
+            .col6 {
+              width: 1.9rem;
+              text-align: center;
+
+              .gray {
+                background-color: #C2AC8C;
+                cursor:default;
+              }
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+
+
+  .bishi {
+
+    // 顶部广告
+    .banner {
+      background-image: url('./img/hall-bg2.png');
+    }
+
+    >.container {
+      margin-top: 0.7rem;
+      height: 9.62rem;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 2.7rem;
+
+      .content {
+        padding-top: .59rem;
+
+        h4 {
+          font-size: .24rem;
+          color: $mc3;
+          line-height: .33rem;
+          text-align: center;
+        }
+
+        p {
+          font-size: .2rem;
+          color: $mc9;
+          padding-top: .2rem;
+          line-height: .28rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.bottom {
+    width: 12rem;
+    height: 4.5rem;
+    margin-top: .9rem;
+    // background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 .4rem 0 rgba(0, 0, 0, 0.08);
+    background-image: url('../images/tab-bottom-bg.png');
+    position: relative;
+    &::before{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -0.1rem;
+        content:'';
+        width: 10px;
+        height: .05rem;
+        background-image: url('../images/tab-bottom-down.png');
+    }
+    .top_box_slogan {
+        text-align: center;
+
+        .slogan {
+            padding-top: .46rem;
+
+            span {
+                font-size: .28rem;
+                font-weight: 500;
+                color: rgba(51, 51, 51, 1);
+            }
+
+        }
+
+        .method {
+            padding-top: .18rem;
+
+            span {
+                font-size: .16rem;
+                color: rgba(51, 51, 51, 1);
+            }
+        }
+
+    }
+
+    .bottom_box_type {
+        display: flex;
+        height: 2.8rem;
+        margin-top: .4rem;
+        border-top: .01rem #F3F3F3 solid;
+
+        .flex_item {
+            width: 3rem;
+            text-align: center;
+            border-right: .01rem #F3F3F3 solid;
+
+            .img_bg {
+                padding: .4rem 0 .4rem 0;
+
+                img {
+                    width: .48rem;
+                    height: .48rem;
+                }
+            }
+
+            .title_plan span {
+                font-size: .2rem;
+                font-weight: 500;
+                color: rgba(51, 51, 51, 1);
+
+            }
+
+            .infos_plan {
+                width: 2.1rem;
+                height: .47rem;
+                overflow: hidden;
+                margin: .2rem .45rem 0 .45rem;
+
+                span {
+                    color: rgba(102, 102, 102, 1);
+                    line-height: .22rem;
+
+                }
+
+            }
+        }
+
+        .onlineProcess {
+            border-right: 0;
+        }
+    }
+}
+
+.btn_into {
+    width: 2.1rem;
+    height: .64rem;
+    line-height: .64rem;
+    text-align: center;
+    margin: .64rem auto 0;
+    background: linear-gradient(54deg, rgba(251, 95, 19, 1) 0%, rgba(255, 131, 41, 1) 100%);
+    border-radius: .32rem;
+    // transition: all 1s;
+    &:hover{
+        background: linear-gradient(54deg, rgba(255, 131, 41, 1) 0%, rgba(251, 95, 19, 1) 100%);
+    }
+    span {
+        font-size: .22rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+

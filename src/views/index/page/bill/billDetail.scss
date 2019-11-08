@@ -1,0 +1,204 @@
+.bill-detail {
+  // height: 3000px;
+  padding-bottom: .5rem;
+
+  // 顶部广告
+  .banner {
+    height: 2.51rem;
+    position: relative;
+
+    background-image: url('./img/hall-detail-bg.png');
+
+    .new-list-title {
+      // background-color: #F8F8F8;
+
+      .breadcrumb {
+        height: .6rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: #fff;
+
+        .new-home {
+          cursor: pointer;
+        }
+
+        i {
+          vertical-align: middle;
+        }
+
+        line-height: .22rem;
+      }
+    }
+
+    .bill-info {
+      .container {
+        background-color: #fff;
+        padding: .3rem .4rem;
+        display: flex;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+
+        >.left {
+          width: 4.9rem;
+
+          .top {
+            h4 {
+              font-weight: 600;
+              font-size: .2rem;
+              color: $mc3;
+              line-height: .28rem;
+
+              span {
+                color: $mc6;
+                font-size: .14rem;
+                line-height: .2rem;
+              }
+            }
+
+            .tip {
+              display: flex;
+              padding: .12rem 0 .16rem;
+
+              >span {
+                padding: 0 .11rem;
+                height: .26rem;
+                line-height: .26rem;
+                background-color: rgba(78, 106, 147, 0.1);
+                color: #6C84A6;
+                margin-right: .1rem;
+              }
+            }
+          }
+
+          .center {
+            padding-bottom: .2rem;
+            border-bottom: 1px solid $mbf3;
+
+            ul {
+              display: flex;
+
+              li {
+                width: 1.1rem;
+
+                .title {
+                  display: flex;
+                  line-height: .3rem;
+
+                  &.red {
+                    color: $mcr;
+                  }
+
+                  .da {
+                    font-size: .22rem;
+                    vertical-align: middle;
+                  }
+
+                  .xiao {
+                    font-size: .12rem;
+                    vertical-align: middle;
+                    line-height: .30rem;
+                    margin-left: .02rem;
+                    transform: translateY(0.02rem);
+                  }
+                }
+
+                &:last-child {
+                  width: 2rem;
+                }
+
+                .content {
+                  p {
+                    font-size: .14rem;
+                    color: $mc6;
+                    padding-top: .05rem;
+                  }
+                }
+              }
+            }
+
+
+          }
+
+          .bottom {
+            padding-top: .24rem;
+          }
+        }
+
+        >.right {
+          img {
+            width: 2.8rem;
+            height: 1.9rem;
+            // &:first-child{
+            margin-left: .3rem;
+            // }
+          }
+        }
+      }
+    }
+  }
+
+  .quote {
+    padding-top: 1rem;
+
+    .container {
+      padding: .3rem .4rem;
+      padding-right: 2rem;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+      height: 430px;
+
+      .title {
+        h4 {
+          font-size: .2rem;
+          color: $mc3;
+          line-height: .28rem;
+        }
+      }
+
+      .content {
+
+        .from-group {
+          display: flex;
+          flex-wrap: wrap;
+
+          .input-box {
+            width: 3.9rem;
+            height: .6rem;
+            margin-top: .3rem;
+            display: flex;
+            line-height: .6rem;
+            align-items: center;
+            border:1px solid $mbf3;
+            margin-right: .3rem;
+            .left {
+              padding: 0 .25rem;
+            }
+            .center{
+              flex:1;
+            }
+            .right {
+              padding: 0 .25rem;
+            }
+          }
+        }
+        .agreement{
+          padding-top: .3rem;
+          padding-bottom: .4rem;
+          span{
+            color:$mc;
+            cursor: pointer;
+          }
+        }
+        .to-quote{
+          .btn-md-primary{
+            width: 1.64rem;
+            height: .44rem;
+            font-size: .16rem;
+          }
+
+        }
+
+
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+export {default as banner} from './banner/banner.vue'
+export {default as hotNews} from './hotNews/hotNews.vue'
+export {default as special} from './special/special.vue'
+export {default as insurance} from './insurance/insurance.vue'
+export {default as flpecl} from './flpecl/flpecl.vue'
